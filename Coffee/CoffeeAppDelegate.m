@@ -7,23 +7,45 @@
 //
 
 #import "CoffeeAppDelegate.h"
-
-#import "CoffeeViewController.h"
-
+#import "Coffees.h"
+#import "MainTabViewController.h"
 @implementation CoffeeAppDelegate
 
 
-@synthesize window=_window;
+@synthesize window, dataSource;
 
-@synthesize viewController=_viewController;
+@synthesize viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    dataSource = [[CoffeeCoreData alloc] init];
+    
+    /*
+     Example core data usage using active records:
+     */
+    
+//    Coffees* aCoffee = [Coffees createInContext:dataSource.managedObjectContext];
+//    aCoffee.name = @"Un arabica";
+//    [dataSource.managedObjectContext save];
+//    
+//    
+//    Coffees* bCoffee = (Coffees*)[Coffees findFirstInContext:dataSource.managedObjectContext];
+//    DLog(@"name is %@", bCoffee.name);
+//
+//    NSArray* arr = [Coffees findAllInContext:dataSource.managedObjectContext];
+//    for (Coffees* c in arr) {
+//        DLog(@"arry c name %@", c.name);
+//    }
      
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
+    window.rootViewController = viewController;
+//    [window addSubview:viewController.view];
+    [window makeKeyAndVisible];
     return YES;
+}
+
+-(CoffeeCoreData*) ds {
+    return dataSource;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -67,8 +89,9 @@
 
 - (void)dealloc
 {
-    [_window release];
-    [_viewController release];
+    [window release];
+    [viewController release];
+    [dataSource release];
     [super dealloc];
 }
 

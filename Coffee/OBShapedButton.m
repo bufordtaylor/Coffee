@@ -34,10 +34,16 @@
 
 @implementation OBShapedButton
 
+-(void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    DLog(@"balls");
+}
+
+
 // UIView uses this method in hitTest:withEvent: to determine which subview should receive a touch event.
 // If pointInside:withEvent: returns YES, then the subview’s hierarchy is traversed; otherwise, its branch
 // of the view hierarchy is ignored.
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
+    
     
     // Return NO if even super returns NO (i.e., if point lies outside our bounds)
     BOOL superResult = [super pointInside:point withEvent:event];
@@ -58,10 +64,11 @@
     point.x *= (bSize.width != 0) ? (iSize.width / bSize.width) : 1;
     point.y *= (bSize.height != 0) ? (iSize.height / bSize.height) : 1;
     
+  
     CGColorRef pixelColor = [[buttonImage colorAtPixel:point] CGColor];
     CGFloat alpha = CGColorGetAlpha(pixelColor);
-    UIColor* col = [UIColor colorWithCGColor:pixelColor];
-    NSLog(@"%@", col );
+
+//    NSLog(@"%@ %@", pixelColor, [event description] );
     return alpha >= kAlphaVisibleThreshold;
 }
 

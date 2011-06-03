@@ -11,4 +11,8 @@
 
 @implementation Services
 
++(CoffeeCoreData*) ds {
+    return [(CoffeeAppDelegate*)[[UIApplication sharedApplication] delegate] dataSource];
+}
+
 @end

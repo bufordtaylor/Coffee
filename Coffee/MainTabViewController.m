@@ -11,6 +11,16 @@
 
 @implementation MainTabViewController
 
+@synthesize tabBarController;
+
+-(id) initWithCoder:(NSCoder *)aDecoder {
+    
+    if (self == [super initWithCoder:aDecoder]) {
+        NSLog(@"Starting everything over here");
+    }
+    return self;
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -38,6 +48,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    DLog(@"shit");
     // Do any additional setup after loading the view from its nib.
 }
 

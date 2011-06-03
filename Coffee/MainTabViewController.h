@@ -11,6 +11,11 @@
 
 @interface MainTabViewController : UIViewController {
     
+    UITabBarController* tabBarController;
+    
 }
+
+@property (nonatomic, assign) IBOutlet UITabBarController* tabBarController;
+
 
 @end

@@ -7,15 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CoffeeCoreData.h"
 
-@class CoffeeViewController;
+@class MainTabViewController;
 
-@interface CoffeeAppDelegate : NSObject <UIApplicationDelegate> {
+@interface CoffeeAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate> {
+    UIWindow* window;
+    CoffeeCoreData* dataSource;
+    UITabBarController *viewController;
 
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
+-(CoffeeCoreData*) ds;
 
-@property (nonatomic, retain) IBOutlet CoffeeViewController *viewController;
+@property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) CoffeeCoreData* dataSource;
+@property (nonatomic, retain) IBOutlet UITabBarController *viewController;
 
 @end

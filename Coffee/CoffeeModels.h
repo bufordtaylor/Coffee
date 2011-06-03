@@ -1,14 +1,5 @@
-//
-//  CoffeeModels.h
-//  Coffee
-//
-//  Created by Buford Taylor on 4/30/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
-
-
-@protocol CoffeeModels <NSObject>
-
-@end
+#import "Descriptors.h"
+#import "Sessions.h"
+#import "Categories.h"
+#import "Coffees.h"
+#import "Samples.h"

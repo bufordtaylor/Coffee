@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SplitCoffeeViewController.h"
 
 
-@interface Detail1VC : UIViewController {
+@interface Detail1VC : UIViewController <SubstitutableDetailViewController> {
+    UIToolbar* toolbar;
     
 }
+
+@property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 
 @end

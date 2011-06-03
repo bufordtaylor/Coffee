@@ -6,9 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 
-
-@protocol Settings <NSObject>
-
-@end
+#define kConstantStoreName @"ccCoffee.sqlite"
+#define kConstantModelConfigurationName @"Constant"
+#define kDynamicModelConfigurationName @"Dynamic"

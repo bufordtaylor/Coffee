@@ -7,10 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NewSessionViewController.h"
 
 
 @interface SessionListViewController : UIViewController {
-    
+    IBOutlet UIBarButtonItem* newSessionButton;
+    NewSessionViewController* newSessionViewController;
+    UIPopoverController* popController;
 }
+
+@property (nonatomic, retain) UIBarButtonItem* newSessionButton;
+
+-(IBAction) clickedNewSessionButton:(id)sender;
 
 @end

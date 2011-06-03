@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "CoffeeAppDelegate.h"
+#import "CoffeeCoreData.h"
 
 @interface Services : NSObject {
     
 }
+
++(CoffeeCoreData*) ds;
 
 @end

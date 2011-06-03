@@ -11,6 +11,12 @@
 
 @interface NewSessionViewController : UIViewController {
     
+    IBOutlet UIButton* startSessionButton;
+    IBOutlet UITextField* numberOfSamplesButton;
+    
 }
+
+@property (nonatomic, retain) UIButton* startSessionButton;
+@property (nonatomic, retain) UITextField* numberOfSamplesButton;
 
 @end
