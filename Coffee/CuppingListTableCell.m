@@ -7,15 +7,20 @@
 //
 
 #import "CuppingListTableCell.h"
+#import <QuartzCore/QuartzCore.h>
 
 
 @implementation CuppingListTableCell
 
-@synthesize notesButton, notesTextView, scoreTextField, nameTextField;
+@synthesize notesButton, notesTextView, scoreTextField, nameTextField, notesTextField;
 
 -(id) initWithReuseIdentifier:(NSString*)ri {
 	if ((self = [super initWithCellNib:@"CuppingListTableCell" reuseIdentifier:ri])) {
 		DLog(@"CuppingListTableCell init");
+        notesTextView.layer.cornerRadius = 5.0;
+        notesTextView.layer.borderWidth = 1.0f;
+        notesTextView.layer.borderColor = [[UIColor grayColor] CGColor];
+        notesTextView.clipsToBounds = YES;
 	}
 	return self;
 }
@@ -25,7 +30,14 @@
     [scoreTextField release];
     [notesTextView release];
     [notesButton release];
+    [notesTextField release];
 	[super dealloc];
+}
+
+-(void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    
 }
 
 //- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

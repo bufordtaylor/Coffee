@@ -65,7 +65,7 @@
 								<int key="NSID">2</int>
 							</object>
 						</object>
-						<object class="NSFont" key="IBUIFont">
+						<object class="NSFont" key="IBUIFont" id="196389529">
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">12</double>
 							<int key="NSfFlags">16</int>
@@ -81,7 +81,7 @@
 					<object class="IBUITextView" id="1005103956">
 						<reference key="NSNextResponder" ref="641775209"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{334, 13}, {670, 77}}</string>
+						<string key="NSFrame">{{340, 13}, {445, 31}}</string>
 						<reference key="NSSuperview" ref="641775209"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="506673522"/>
@@ -95,11 +95,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 						<string key="IBUIText"/>
-						<object class="NSFont" key="IBUIFont">
-							<string key="NSName">Helvetica</string>
-							<double key="NSSize">17</double>
-							<int key="NSfFlags">16</int>
-						</object>
+						<reference key="IBUIFont" ref="196389529"/>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 							<int key="IBUIAutocapitalizationType">2</int>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -108,7 +104,7 @@
 					<object class="IBUIButton" id="411961691">
 						<reference key="NSNextResponder" ref="641775209"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 59}, {145, 31}}</string>
+						<string key="NSFrame">{{645, 59}, {140, 31}}</string>
 						<reference key="NSSuperview" ref="641775209"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -123,7 +119,7 @@
 							<int key="NSfFlags">16</int>
 						</object>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">Notes</string>
+						<string key="IBUINormalTitle">Coffee Wheel</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
@@ -140,10 +136,10 @@
 					<object class="IBUITextField" id="506673522">
 						<reference key="NSNextResponder" ref="641775209"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{173, 59}, {145, 31}}</string>
+						<string key="NSFrame">{{20, 59}, {85, 31}}</string>
 						<reference key="NSSuperview" ref="641775209"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="411961691"/>
+						<reference key="NSNextKeyView" ref="110456260"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -164,8 +160,34 @@
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						</object>
 					</object>
+					<object class="IBUITextField" id="110456260">
+						<reference key="NSNextResponder" ref="641775209"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{118, 59}, {519, 31}}</string>
+						<reference key="NSSuperview" ref="641775209"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="411961691"/>
+						<bool key="IBUIOpaque">NO</bool>
+						<bool key="IBUIClipsSubviews">YES</bool>
+						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<string key="IBUIText"/>
+						<int key="IBUIBorderStyle">3</int>
+						<string key="IBUIPlaceholder">Notes</string>
+						<object class="NSColor" key="IBUITextColor">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MAA</bytes>
+							<reference key="NSCustomColorSpace" ref="307435215"/>
+						</object>
+						<bool key="IBUIAdjustsFontSizeToFit">YES</bool>
+						<float key="IBUIMinimumFontSize">17</float>
+						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
+							<int key="IBUIReturnKeyType">9</int>
+							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						</object>
+					</object>
 				</object>
-				<string key="NSFrameSize">{1024, 100}</string>
+				<string key="NSFrameSize">{800, 100}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="926191856"/>
@@ -240,6 +262,22 @@
 					</object>
 					<int key="connectionID">18</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="110456260"/>
+						<reference key="destination" ref="841351856"/>
+					</object>
+					<int key="connectionID">22</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">notesTextField</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="110456260"/>
+					</object>
+					<int key="connectionID">23</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -267,9 +305,10 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="926191856"/>
+							<reference ref="506673522"/>
+							<reference ref="110456260"/>
 							<reference ref="411961691"/>
 							<reference ref="1005103956"/>
-							<reference ref="506673522"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -293,6 +332,11 @@
 						<reference key="object" ref="506673522"/>
 						<reference key="parent" ref="641775209"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">21</int>
+						<reference key="object" ref="110456260"/>
+						<reference key="parent" ref="641775209"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -303,6 +347,7 @@
 					<string>-2.CustomClassName</string>
 					<string>10.IBPluginDependency</string>
 					<string>11.IBPluginDependency</string>
+					<string>21.IBPluginDependency</string>
 					<string>4.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
 					<string>9.IBPluginDependency</string>
@@ -311,6 +356,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>CuppingListTableCell</string>
 					<string>UIResponder</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -330,7 +376,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">18</int>
+			<int key="maxID">23</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -344,6 +390,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>nameTextField</string>
 							<string>notesButton</string>
+							<string>notesTextField</string>
 							<string>notesTextView</string>
 							<string>scoreTextField</string>
 						</object>
@@ -351,6 +398,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UITextField</string>
 							<string>UIButton</string>
+							<string>UITextField</string>
 							<string>UITextView</string>
 							<string>UITextField</string>
 						</object>
@@ -361,6 +409,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>nameTextField</string>
 							<string>notesButton</string>
+							<string>notesTextField</string>
 							<string>notesTextView</string>
 							<string>scoreTextField</string>
 						</object>
@@ -373,6 +422,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">notesButton</string>
 								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">notesTextField</string>
+								<string key="candidateClassName">UITextField</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">notesTextView</string>

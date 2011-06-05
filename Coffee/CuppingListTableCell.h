@@ -16,12 +16,14 @@
     IBOutlet UIButton* notesButton;
     IBOutlet UITextField* nameTextField;
     IBOutlet UITextField* scoreTextField;
+    IBOutlet UITextField* notesTextField;
     
 }
 @property (nonatomic, retain) UITextView * notesTextView;
 @property (nonatomic, retain) UIButton * notesButton;
 @property (nonatomic, retain) UITextField * nameTextField;
 @property (nonatomic, retain) UITextField * scoreTextField;
+@property (nonatomic, retain) UITextField * notesTextField;
 
 
 -(id) initWithReuseIdentifier:(NSString*)ri;

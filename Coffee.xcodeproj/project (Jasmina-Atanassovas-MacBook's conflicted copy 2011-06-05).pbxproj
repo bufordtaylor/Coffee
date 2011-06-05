@@ -6,25 +6,12 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		97F5F5B9139C43100062B2D6 /* MOGenerator */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 97F5F5BA139C43100062B2D6 /* Build configuration list for PBXAggregateTarget "MOGenerator" */;
-			buildPhases = (
-				97F5F5BD139C43340062B2D6 /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = MOGenerator;
-			productName = MOGenerator;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		97392FDC137EFAC400A5E59E /* MainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97392FDA137EFAC400A5E59E /* MainTabViewController.m */; };
 		97392FDD137EFAC400A5E59E /* MainTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97392FDB137EFAC400A5E59E /* MainTabViewController.xib */; };
 		97900AD0136CE452008C03D1 /* CoffeeCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 97900ACF136CE452008C03D1 /* CoffeeCoreData.m */; };
 		97900AD4136CE8CA008C03D1 /* Services.m in Sources */ = {isa = PBXBuildFile; fileRef = 97900AD3136CE8CA008C03D1 /* Services.m */; };
+		97900AF6136CF8C1008C03D1 /* _Sessions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97900AEC136CF8BC008C03D1 /* _Sessions.m */; };
 		97900AF7136CF8C1008C03D1 /* _Samples.m in Sources */ = {isa = PBXBuildFile; fileRef = 97900AEE136CF8BD008C03D1 /* _Samples.m */; };
 		97900AF8136CF8C1008C03D1 /* _Descriptors.m in Sources */ = {isa = PBXBuildFile; fileRef = 97900AF0136CF8BF008C03D1 /* _Descriptors.m */; };
 		97900AF9136CF8C1008C03D1 /* _Coffees.m in Sources */ = {isa = PBXBuildFile; fileRef = 97900AF2136CF8BF008C03D1 /* _Coffees.m */; };
@@ -47,8 +34,6 @@
 		97929F21138A238F00A18C92 /* SessionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97929F1F138A238F00A18C92 /* SessionListViewController.xib */; };
 		97929F2D138AAAA900A18C92 /* NewSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97929F2B138AAAA800A18C92 /* NewSessionViewController.m */; };
 		97929F2E138AAAA900A18C92 /* NewSessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97929F2C138AAAA900A18C92 /* NewSessionViewController.xib */; };
-		97AC4CA1139C48C70062FA10 /* Wheels.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AC4C9F139C48C70062FA10 /* Wheels.m */; };
-		97AC4CA5139C48D60062FA10 /* _Wheels.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AC4CA3139C48D60062FA10 /* _Wheels.m */; };
 		97CFF77E137F44E2000BBBFF /* DescriptorsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97CFF77C137F44E2000BBBFF /* DescriptorsViewController.m */; };
 		97CFF77F137F44E2000BBBFF /* DescriptorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97CFF77D137F44E2000BBBFF /* DescriptorsViewController.xib */; };
 		97CFF791137F9C7C000BBBFF /* coffeecolorwheel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97CFF790137F9C7C000BBBFF /* coffeecolorwheel.jpg */; };
@@ -79,7 +64,6 @@
 		97EB2955135A62110022A0F0 /* CoffeeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EB2954135A62110022A0F0 /* CoffeeTests.m */; };
 		97EB2972135A75FE0022A0F0 /* ScalePopoverPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 97EB2971135A75FE0022A0F0 /* ScalePopoverPicker.m */; };
 		97EB297D135BC6D80022A0F0 /* coffee.png in Resources */ = {isa = PBXBuildFile; fileRef = 97EB297C135BC6D80022A0F0 /* coffee.png */; };
-		97F5F5C0139C47BB0062B2D6 /* _Sessions.m in Sources */ = {isa = PBXBuildFile; fileRef = 97F5F5BE139C47BB0062B2D6 /* _Sessions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +85,8 @@
 		97900AD2136CE8CA008C03D1 /* Services.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Services.h; sourceTree = "<group>"; };
 		97900AD3136CE8CA008C03D1 /* Services.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Services.m; sourceTree = "<group>"; };
 		97900AE3136CEC79008C03D1 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		97900AEC136CF8BC008C03D1 /* _Sessions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Sessions.m; sourceTree = "<group>"; };
+		97900AED136CF8BD008C03D1 /* _Sessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Sessions.h; sourceTree = "<group>"; };
 		97900AEE136CF8BD008C03D1 /* _Samples.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Samples.m; sourceTree = "<group>"; };
 		97900AEF136CF8BE008C03D1 /* _Samples.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Samples.h; sourceTree = "<group>"; };
 		97900AF0136CF8BF008C03D1 /* _Descriptors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Descriptors.m; sourceTree = "<group>"; };
@@ -142,10 +128,6 @@
 		97929F2A138AAAA800A18C92 /* NewSessionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewSessionViewController.h; sourceTree = "<group>"; };
 		97929F2B138AAAA800A18C92 /* NewSessionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewSessionViewController.m; sourceTree = "<group>"; };
 		97929F2C138AAAA900A18C92 /* NewSessionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewSessionViewController.xib; sourceTree = "<group>"; };
-		97AC4C9F139C48C70062FA10 /* Wheels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Wheels.m; sourceTree = "<group>"; };
-		97AC4CA0139C48C70062FA10 /* Wheels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wheels.h; sourceTree = "<group>"; };
-		97AC4CA3139C48D60062FA10 /* _Wheels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Wheels.m; sourceTree = "<group>"; };
-		97AC4CA4139C48D60062FA10 /* _Wheels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Wheels.h; sourceTree = "<group>"; };
 		97CFF77B137F44E2000BBBFF /* DescriptorsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptorsViewController.h; sourceTree = "<group>"; };
 		97CFF77C137F44E2000BBBFF /* DescriptorsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptorsViewController.m; sourceTree = "<group>"; };
 		97CFF77D137F44E2000BBBFF /* DescriptorsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DescriptorsViewController.xib; sourceTree = "<group>"; };
@@ -190,8 +172,6 @@
 		97EB2970135A75FE0022A0F0 /* ScalePopoverPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScalePopoverPicker.h; sourceTree = "<group>"; };
 		97EB2971135A75FE0022A0F0 /* ScalePopoverPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScalePopoverPicker.m; sourceTree = "<group>"; };
 		97EB297C135BC6D80022A0F0 /* coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coffee.png; sourceTree = "<group>"; };
-		97F5F5BE139C47BB0062B2D6 /* _Sessions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Sessions.m; sourceTree = "<group>"; };
-		97F5F5BF139C47BB0062B2D6 /* _Sessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Sessions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,8 +206,6 @@
 				97EADF351363CADF0007FA64 /* Descriptors.m */,
 				97EADF371363CAED0007FA64 /* Sessions.h */,
 				97EADF381363CAED0007FA64 /* Sessions.m */,
-				97AC4C9F139C48C70062FA10 /* Wheels.m */,
-				97AC4CA0139C48C70062FA10 /* Wheels.h */,
 				97EADF311363CADF0007FA64 /* Categories.h */,
 				97EADF321363CADF0007FA64 /* Categories.m */,
 				97EADF2E1363CADE0007FA64 /* Coffees.h */,
@@ -246,25 +224,25 @@
 				97EB293A135A62100022A0F0 /* CoffeeViewController.h */,
 				97EB293B135A62100022A0F0 /* CoffeeViewController.m */,
 				97EB293D135A62100022A0F0 /* CoffeeViewController.xib */,
-				97F5F5AA139B56210062B2D6 /* Main */,
+				97392FD9137EFAC400A5E59E /* MainTabViewController.h */,
 				97929F1C138A237600A18C92 /* Sessions */,
 				97929EF51389869600A18C92 /* Cupping */,
+				97392FDA137EFAC400A5E59E /* MainTabViewController.m */,
 				97CFF781137F4554000BBBFF /* Descriptors */,
+				97392FDB137EFAC400A5E59E /* MainTabViewController.xib */,
+				97929F0F13898BF300A18C92 /* IBTableViewCell.h */,
+				97929F1013898BF300A18C92 /* IBTableViewCell.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		97900ACD136CE3F0008C03D1 /* Helpers */ = {
+		97900ACD136CE3F0008C03D1 /* Popovers */ = {
 			isa = PBXGroup;
 			children = (
-				97CFF792137F9D53000BBBFF /* UIImage+ColorAtPixel.h */,
-				97CFF793137F9D53000BBBFF /* UIImage+ColorAtPixel.m */,
-				97CFF794137F9D54000BBBFF /* OBShapedButton.h */,
-				97CFF795137F9D54000BBBFF /* OBShapedButton.m */,
-				97929F0F13898BF300A18C92 /* IBTableViewCell.h */,
-				97929F1013898BF300A18C92 /* IBTableViewCell.m */,
+				97EB2970135A75FE0022A0F0 /* ScalePopoverPicker.h */,
+				97EB2971135A75FE0022A0F0 /* ScalePopoverPicker.m */,
 			);
-			name = Helpers;
+			name = Popovers;
 			sourceTree = "<group>";
 		};
 		97900AD1136CE8BE008C03D1 /* Services */ = {
@@ -306,7 +284,7 @@
 		97900B17136D11FD008C03D1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				97900ACD136CE3F0008C03D1 /* Helpers */,
+				97900ACD136CE3F0008C03D1 /* Popovers */,
 				97900ACC136CE3DB008C03D1 /* ViewControllers */,
 			);
 			name = Views;
@@ -341,8 +319,10 @@
 		97CFF781137F4554000BBBFF /* Descriptors */ = {
 			isa = PBXGroup;
 			children = (
-				97EB2970135A75FE0022A0F0 /* ScalePopoverPicker.h */,
-				97EB2971135A75FE0022A0F0 /* ScalePopoverPicker.m */,
+				97CFF792137F9D53000BBBFF /* UIImage+ColorAtPixel.h */,
+				97CFF793137F9D53000BBBFF /* UIImage+ColorAtPixel.m */,
+				97CFF794137F9D54000BBBFF /* OBShapedButton.h */,
+				97CFF795137F9D54000BBBFF /* OBShapedButton.m */,
 				97CFF77B137F44E2000BBBFF /* DescriptorsViewController.h */,
 				97CFF77C137F44E2000BBBFF /* DescriptorsViewController.m */,
 				97CFF77D137F44E2000BBBFF /* DescriptorsViewController.xib */,
@@ -353,15 +333,13 @@
 		97EADF1E1363C5CA0007FA64 /* Computer */ = {
 			isa = PBXGroup;
 			children = (
+				97900AEC136CF8BC008C03D1 /* _Sessions.m */,
 				97900AFE136CFD0F008C03D1 /* MOGenBaseClass.h */,
 				97900AFF136CFD10008C03D1 /* MOGenBaseClass.m */,
+				97900AED136CF8BD008C03D1 /* _Sessions.h */,
 				97900AEE136CF8BD008C03D1 /* _Samples.m */,
 				97900AEF136CF8BE008C03D1 /* _Samples.h */,
 				97900AF0136CF8BF008C03D1 /* _Descriptors.m */,
-				97F5F5BE139C47BB0062B2D6 /* _Sessions.m */,
-				97AC4CA3139C48D60062FA10 /* _Wheels.m */,
-				97AC4CA4139C48D60062FA10 /* _Wheels.h */,
-				97F5F5BF139C47BB0062B2D6 /* _Sessions.h */,
 				97900AF1136CF8BF008C03D1 /* _Descriptors.h */,
 				97900AF2136CF8BF008C03D1 /* _Coffees.m */,
 				97900AF3136CF8BF008C03D1 /* _Coffees.h */,
@@ -407,6 +385,10 @@
 				97900B17136D11FD008C03D1 /* Views */,
 				97900AEB136CF6A1008C03D1 /* Data */,
 				97EB297B135BC6AC0022A0F0 /* Media */,
+				97EB2934135A62100022A0F0 /* CoffeeAppDelegate.h */,
+				97900AE3136CEC79008C03D1 /* Settings.h */,
+				97EB2935135A62100022A0F0 /* CoffeeAppDelegate.m */,
+				97EB2937135A62100022A0F0 /* MainWindow.xib */,
 				97EB292C135A62100022A0F0 /* Supporting Files */,
 			);
 			path = Coffee;
@@ -452,20 +434,6 @@
 				97EB297C135BC6D80022A0F0 /* coffee.png */,
 			);
 			name = Media;
-			sourceTree = "<group>";
-		};
-		97F5F5AA139B56210062B2D6 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				97392FD9137EFAC400A5E59E /* MainTabViewController.h */,
-				97EB2934135A62100022A0F0 /* CoffeeAppDelegate.h */,
-				97392FDA137EFAC400A5E59E /* MainTabViewController.m */,
-				97392FDB137EFAC400A5E59E /* MainTabViewController.xib */,
-				97900AE3136CEC79008C03D1 /* Settings.h */,
-				97EB2935135A62100022A0F0 /* CoffeeAppDelegate.m */,
-				97EB2937135A62100022A0F0 /* MainWindow.xib */,
-			);
-			name = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -526,7 +494,6 @@
 			targets = (
 				97EB2920135A62100022A0F0 /* Coffee */,
 				97EB2944135A62100022A0F0 /* CoffeeTests */,
-				97F5F5B9139C43100062B2D6 /* MOGenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -577,19 +544,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
-		97F5F5BD139C43340062B2D6 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Download and install mogenerator from http://rentzsch.github.com/mogenerator/\n\n/usr/bin/mogenerator -M ./Classes/Shared/Model/MOGenerated -H ./Classes/Shared/Model --model ./Classes/Shared/Model/Eventbrite.xcdatamodeld/Eventbrite.xcdatamodel --baseClass MOGenBaseClass";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -609,6 +563,7 @@
 				97EADF391363CAED0007FA64 /* Sessions.m in Sources */,
 				97900AD0136CE452008C03D1 /* CoffeeCoreData.m in Sources */,
 				97900AD4136CE8CA008C03D1 /* Services.m in Sources */,
+				97900AF6136CF8C1008C03D1 /* _Sessions.m in Sources */,
 				97900AF7136CF8C1008C03D1 /* _Samples.m in Sources */,
 				97900AF8136CF8C1008C03D1 /* _Descriptors.m in Sources */,
 				97900AF9136CF8C1008C03D1 /* _Coffees.m in Sources */,
@@ -630,9 +585,6 @@
 				97929F1113898BF500A18C92 /* IBTableViewCell.m in Sources */,
 				97929F20138A238F00A18C92 /* SessionListViewController.m in Sources */,
 				97929F2D138AAAA900A18C92 /* NewSessionViewController.m in Sources */,
-				97F5F5C0139C47BB0062B2D6 /* _Sessions.m in Sources */,
-				97AC4CA1139C48C70062FA10 /* Wheels.m in Sources */,
-				97AC4CA5139C48D60062FA10 /* _Wheels.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -800,20 +752,6 @@
 			};
 			name = Release;
 		};
-		97F5F5BB139C43100062B2D6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		97F5F5BC139C43100062B2D6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -840,15 +778,6 @@
 			buildConfigurations = (
 				97EB295C135A62110022A0F0 /* Debug */,
 				97EB295D135A62110022A0F0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		97F5F5BA139C43100062B2D6 /* Build configuration list for PBXAggregateTarget "MOGenerator" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				97F5F5BB139C43100062B2D6 /* Debug */,
-				97F5F5BC139C43100062B2D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
