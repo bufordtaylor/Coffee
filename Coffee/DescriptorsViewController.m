@@ -12,10 +12,11 @@
 
 #define RGB(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1];
 
-#define kGreenSour [UIColor colorWithRed:0.521569 green:0.768627 blue:0.254902 alpha:1]
-#define kOrangeSweet [UIColor colorWithRed:0.949020 green:0.396078 blue:0.133333 alpha:1]
-#define kBlueSalt [UIColor colorWithRed:0.180392 green:0.772549 blue:0.956863 alpha:1]
-#define kPurpleBitter [UIColor colorWithRed:0.925490 green:0.000000 blue:0.549020 alpha:1]  
+#define k94 [UIColor colorWithRed:0.521569 green:0.768627 blue:0.254902 alpha:1]
+#define k93 [UIColor colorWithRed:0.949020 green:0.396078 blue:0.133333 alpha:1]
+#define k92 [UIColor colorWithRed:0.180392 green:0.772549 blue:0.956863 alpha:1]
+#define k91 [UIColor colorWithRed:0.925490 green:0.000000 blue:0.549020 alpha:1]
+#define k90 [UIColor colorWithRed:1.000000 green:0.980392 blue:0.729412 alpha:1]
 
 @implementation UIColor (Extensions)
 
@@ -44,7 +45,7 @@
     int r1i = (int)(components[0]*100);
     
     //Debug for getting color values
-//    DLog(@"%f %f %f", components[0], components[1], components[2]);
+    DLog(@"%f %f %f", components[0], components[1], components[2]);
     int r2i = (int)(kcomponents[0]*100);
     int g1i = (int)(components[1]*100);
     int g2i = (int)(kcomponents[1]*100);
@@ -86,20 +87,24 @@
     CGColorRef pixelColor = [[buttonImage colorAtPixel:point] CGColor];
     UIColor* color = [UIColor colorWithCGColor:pixelColor];
     
-    if([self colorCompare:color constColor:kGreenSour]){
+    if([self colorCompare:color constColor:k94]){
         NSArray* array = [NSArray arrayWithObjects:aTextView.text, @"Sour", nil];
         aTextView.text = [array componentsJoinedByString:@"   "];
     }
-    if([self colorCompare:color constColor:kBlueSalt]){
+    if([self colorCompare:color constColor:k92]){
         NSArray* array = [NSArray arrayWithObjects:aTextView.text, @"Salt", nil];
         aTextView.text = [array componentsJoinedByString:@"   "];
     }
-    if([self colorCompare:color constColor:kPurpleBitter]){
+    if([self colorCompare:color constColor:k91]){
         NSArray* array = [NSArray arrayWithObjects:aTextView.text, @"Bitter", nil];
         aTextView.text = [array componentsJoinedByString:@"   "];
     }
-    if([self colorCompare:color constColor:kOrangeSweet]){
+    if([self colorCompare:color constColor:k93]){
         NSArray* array = [NSArray arrayWithObjects:aTextView.text, @"Sweet", nil];
+        aTextView.text = [array componentsJoinedByString:@"   "];
+    }
+    if([self colorCompare:color constColor:k90]){
+        NSArray* array = [NSArray arrayWithObjects:aTextView.text, @"Dry Distillation", nil];
         aTextView.text = [array componentsJoinedByString:@"   "];
     }
     
