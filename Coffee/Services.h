@@ -15,5 +15,7 @@
 }
 
 +(CoffeeCoreData*) ds;
++(NSManagedObjectContext*) moc;
++(void) save;
 
 @end

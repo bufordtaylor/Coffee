@@ -7,7 +7,7 @@
 //
 
 #import "CoffeeAppDelegate.h"
-#import "Coffees.h"
+#import "CoffeeModels.h"
 #import "MainTabViewController.h"
 @implementation CoffeeAppDelegate
 
@@ -25,6 +25,7 @@
      Example core data usage using active records:
      */
     
+
 //    Coffees* aCoffee = [Coffees createInContext:dataSource.managedObjectContext];
 //    aCoffee.name = @"Un arabica";
 //    [dataSource.managedObjectContext save];

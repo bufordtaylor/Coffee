@@ -17,12 +17,16 @@
     UITextView* aTextView;
     UIButton* saveButton;
     UIButton* cancelButton;
+    
+    IBOutlet UILabel* l1;
+    IBOutlet UILabel* l2;
 }
 
 @property (nonatomic, retain) IBOutlet OBShapedButton* aButton;
 @property (nonatomic, retain) IBOutlet UITextView* aTextView;
 @property (nonatomic, retain) IBOutlet UIButton* saveButton;
 @property (nonatomic, retain) IBOutlet UIButton* cancelButton;
+
 
 -(void)balls;
 -(BOOL) sillyColorComparison:(CGFloat)red1 red2:(CGFloat)r2 green1:(CGFloat)g1 green2:(CGFloat)g2 blue1:(CGFloat)b1 blue2:(CGFloat)b2;

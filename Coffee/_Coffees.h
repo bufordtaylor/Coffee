@@ -10,6 +10,8 @@
 
 
 
+
+
 @interface CoffeesID : NSManagedObjectID {}
 @end
 
@@ -21,25 +23,37 @@
 
 
 
-@property (nonatomic, retain) NSDate *date;
-
-//- (BOOL)validateDate:(id*)value_ error:(NSError**)error_;
-
-
-
 @property (nonatomic, retain) NSString *name;
 
 //- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
 
 
 
-@property (nonatomic, retain) NSNumber *inventory;
+@property (nonatomic, retain) NSString *descriptions;
 
-@property float inventoryValue;
-- (float)inventoryValue;
-- (void)setInventoryValue:(float)value_;
+//- (BOOL)validateDescriptions:(id*)value_ error:(NSError**)error_;
 
-//- (BOOL)validateInventory:(id*)value_ error:(NSError**)error_;
+
+
+@property (nonatomic, retain) NSNumber *score;
+
+@property int scoreValue;
+- (int)scoreValue;
+- (void)setScoreValue:(int)value_;
+
+//- (BOOL)validateScore:(id*)value_ error:(NSError**)error_;
+
+
+
+@property (nonatomic, retain) NSString *notes;
+
+//- (BOOL)validateNotes:(id*)value_ error:(NSError**)error_;
+
+
+
+@property (nonatomic, retain) NSDate *date;
+
+//- (BOOL)validateDate:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -59,23 +73,35 @@
 @interface _Coffees (CoreDataGeneratedPrimitiveAccessors)
 
 
-- (NSDate*)primitiveDate;
-- (void)setPrimitiveDate:(NSDate*)value;
-
-
-
-
 - (NSString*)primitiveName;
 - (void)setPrimitiveName:(NSString*)value;
 
 
 
 
-- (NSNumber*)primitiveInventory;
-- (void)setPrimitiveInventory:(NSNumber*)value;
+- (NSString*)primitiveDescriptions;
+- (void)setPrimitiveDescriptions:(NSString*)value;
 
-- (float)primitiveInventoryValue;
-- (void)setPrimitiveInventoryValue:(float)value_;
+
+
+
+- (NSNumber*)primitiveScore;
+- (void)setPrimitiveScore:(NSNumber*)value;
+
+- (int)primitiveScoreValue;
+- (void)setPrimitiveScoreValue:(int)value_;
+
+
+
+
+- (NSString*)primitiveNotes;
+- (void)setPrimitiveNotes:(NSString*)value;
+
+
+
+
+- (NSDate*)primitiveDate;
+- (void)setPrimitiveDate:(NSDate*)value;
 
 
 

@@ -10,38 +10,56 @@
 #import "CuppingListTableCell.h"
 #import "DescriptorsViewController.h"
 
+#import "CoffeeModels.h"
+#import "CoffeeCoreData.h"
+
 
 @implementation CuppingListViewController
 
-@synthesize aTableView, numberOfSamples;
+@synthesize aTableView, numberOfSamples, currentSession;
 
+
+-(void) setupCellArrayWithSkeleton {
+    
+    static NSString* aCell = @"CuppingListTableCell";
+    
+    for (int i = 0; i < numberOfSamples; i++) {
+        CuppingListTableCell* cell = [[[CuppingListTableCell alloc] initWithReuseIdentifier:aCell] autorelease];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.tag = i;
+        [cell.notesButton addTarget:self action:@selector(showPopover:event:) forControlEvents:UIControlEventTouchUpInside];
+        [cellArray addObject:cell];
+    }
+}
 
 #pragma mark - Table lifecycle
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return numberOfSamples;
+    return 1;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath: (NSIndexPath *) indexPath {
-    return 100; 
+    return 110; 
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 1;
+    return numberOfSamples;
+}
+
+- (void)tableView: (UITableView*)tableView willDisplayCell: (UITableViewCell*)cell forRowAtIndexPath: (NSIndexPath*)indexPath
+{
+    UIColor* bgColor = indexPath.row % 2 
+    ? [UIColor colorWithRed:0.666667 green:0.650980 blue:0.494118 alpha: 1.0] 
+    : [UIColor colorWithRed:0.349020 green:0.341176 blue:0.250980 alpha:1.0];
+    cell.backgroundColor = bgColor;
+    cell.textLabel.backgroundColor = [UIColor clearColor];
+    cell.detailTextLabel.backgroundColor = [UIColor clearColor];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    static NSString* aCell = @"CuppingListTableCell";
-    CuppingListTableCell* cell = (CuppingListTableCell*)[self.aTableView dequeueReusableCellWithIdentifier:aCell];
-    if (!cell) {
-        cell = [[[CuppingListTableCell alloc] initWithReuseIdentifier:aCell] autorelease];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        [cell.notesButton addTarget:self action:@selector(showPopover:event:) forControlEvents:UIControlEventTouchUpInside];
-    }
-    return cell;
+    return (CuppingListTableCell*)[cellArray objectAtIndex:indexPath.row];
 }
 
 -(void)valueSelected:(NSString *)val referenceSender:(id)sender {
@@ -55,9 +73,47 @@
 #pragma mark - button actions
 
 -(IBAction)cancelButtonTappedFromToolbar{
+    [currentSession deleteInContext:[Services moc]];
     [self dismissModalViewControllerAnimated:YES];    
 }
 
+-(IBAction)saveButtonTappedFromToolbar{
+    CoffeeCoreData* dataSource = [(CoffeeAppDelegate*)[[UIApplication sharedApplication] delegate] dataSource];
+    
+    for (int i = 0; i < numberOfSamples; i++) {
+        CuppingListTableCell* cell = (CuppingListTableCell*)[cellArray objectAtIndex:i];
+        Coffees* coffee = [Coffees createInContext:dataSource.managedObjectContext];
+        coffee.name = [cell nameTextField].text;
+        coffee.notes = [cell notesTextField].text;
+        coffee.descriptions = [cell notesTextView].text;
+        
+        NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+        [f setNumberStyle:NSNumberFormatterDecimalStyle];
+        NSNumber * myNumber = [f numberFromString:[cell scoreTextField].text];
+        [f release];
+        coffee.score = myNumber;
+    }
+    
+    
+//    Wheels* wheel = [Wheels createInContext:dataSource.managedObjectContext];
+//    wheel.position = [NSNumber numberWithInt:89];
+//    wheel.wheel_group = [NSNumber numberWithInt:1];
+//    wheel.red = [NSNumber numberWithFloat:0.929412];
+//    wheel.blue = [NSNumber numberWithFloat:0.141176];
+//    wheel.green = [NSNumber numberWithFloat:0.109804];
+//    wheel.name = @"Sugar Browning";
+    [dataSource.managedObjectContext save];
+    
+    
+    NSArray* arr = [Coffees findAllInContext:dataSource.managedObjectContext];
+    for (Coffees* c in arr) {
+        DLog(@"arry c name %@", c.name);
+    }
+
+    
+    
+    [self dismissModalViewControllerAnimated:YES];    
+}
 
 //Save action from popover
 - (void)saveAction:(id)sender {
@@ -86,8 +142,18 @@
     UITouch *touch = [touches anyObject];
     CGPoint currentTouchPosition = [touch locationInView:aTableView];
     anIndexPath = [aTableView indexPathForRowAtPoint: currentTouchPosition];
+    
+    //Hack to make the keyboard go away
+    CuppingListTableCell* cell = (CuppingListTableCell*)[aTableView cellForRowAtIndexPath:anIndexPath];
+    [[cell notesTextView] resignFirstResponder];
+    [[cell scoreTextField] resignFirstResponder];
+    [[cell nameTextField] resignFirstResponder];
+    
+    [self.view endEditing:TRUE];
   
     UIButton* button = (UIButton*) sender;
+    [button becomeFirstResponder];
+    
     
     descriptorViewController = [[DescriptorsViewController alloc] init];
     popController = [[UIPopoverController alloc] initWithContentViewController:descriptorViewController];               
@@ -96,7 +162,7 @@
     
 
     [popController presentPopoverFromRect:[button frame] inView:[button superview] 
-                           permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES]; 
+                           permittedArrowDirections:UIPopoverArrowDirectionRight animated:YES]; 
     
     [descriptorViewController.saveButton addTarget:self action:@selector(saveAction:) forControlEvents:UIControlEventTouchUpInside];
     [descriptorViewController.cancelButton addTarget:self action:@selector(cancelAction:) forControlEvents:UIControlEventTouchUpInside];
@@ -110,12 +176,17 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        DLog(@"initing cupping list");
+        cellArray = [[NSMutableArray alloc] initWithCapacity:numberOfSamples];
     }
+    
+
     return self;
 }
 
 - (void)dealloc
 {
+    [cellArray release];
     [super dealloc];
 }
 
@@ -151,6 +222,8 @@
     headerLabel.backgroundColor = [UIColor clearColor];
     [containerView addSubview:headerLabel];
     aTableView.tableHeaderView = containerView;
+    
+    [self setupCellArrayWithSkeleton];
     
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.

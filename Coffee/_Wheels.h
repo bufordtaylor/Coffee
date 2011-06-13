@@ -4,6 +4,8 @@
 #import <CoreData/CoreData.h>
 #import "MOGenBaseClass.h"
 
+@class FlavorWheels;
+
 
 
 
@@ -48,6 +50,16 @@
 
 
 
+@property (nonatomic, retain) NSNumber *wheel_group;
+
+@property int wheel_groupValue;
+- (int)wheel_groupValue;
+- (void)setWheel_groupValue:(int)value_;
+
+//- (BOOL)validateWheel_group:(id*)value_ error:(NSError**)error_;
+
+
+
 @property (nonatomic, retain) NSNumber *blue;
 
 @property float blueValue;
@@ -66,6 +78,11 @@
 
 //- (BOOL)validatePosition:(id*)value_ error:(NSError**)error_;
 
+
+
+
+@property (nonatomic, retain) FlavorWheels* flavor_grouping;
+//- (BOOL)validateFlavor_grouping:(id*)value_ error:(NSError**)error_;
 
 
 
@@ -103,6 +120,15 @@
 
 
 
+- (NSNumber*)primitiveWheel_group;
+- (void)setPrimitiveWheel_group:(NSNumber*)value;
+
+- (int)primitiveWheel_groupValue;
+- (void)setPrimitiveWheel_groupValue:(int)value_;
+
+
+
+
 - (NSNumber*)primitiveBlue;
 - (void)setPrimitiveBlue:(NSNumber*)value;
 
@@ -119,6 +145,11 @@
 - (void)setPrimitivePositionValue:(int)value_;
 
 
+
+
+
+- (FlavorWheels*)primitiveFlavor_grouping;
+- (void)setPrimitiveFlavor_grouping:(FlavorWheels*)value;
 
 
 @end

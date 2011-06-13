@@ -13,10 +13,12 @@
     
     IBOutlet UIButton* startSessionButton;
     IBOutlet UITextField* numberOfSamplesButton;
+    IBOutlet UITextField* nameOfSessionButton;
     
 }
 
 @property (nonatomic, retain) UIButton* startSessionButton;
 @property (nonatomic, retain) UITextField* numberOfSamplesButton;
+@property (nonatomic, retain) UITextField* nameOfSessionButton;
 
 @end

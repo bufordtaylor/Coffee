@@ -11,7 +11,7 @@
 
 @implementation NewSessionViewController
 
-@synthesize startSessionButton, numberOfSamplesButton;
+@synthesize startSessionButton, numberOfSamplesButton, nameOfSessionButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,6 +41,18 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    
+    NSDate *now = [[[NSDate alloc] init] autorelease];
+    
+    NSString *theDate = [dateFormat stringFromDate:now];
+    
+    nameOfSessionButton.text = [NSString stringWithFormat:@"Cupping Session on %@", theDate];
+    nameOfSessionButton.clearButtonMode = UITextFieldViewModeWhileEditing;
+    [dateFormat release];
+    
 }
 
 - (void)viewDidUnload

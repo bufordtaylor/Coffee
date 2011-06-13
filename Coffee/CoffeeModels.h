@@ -1,3 +1,4 @@
+#import "CoffeeCoreData.h"
 #import "Descriptors.h"
 #import "Sessions.h"
 #import "Categories.h"

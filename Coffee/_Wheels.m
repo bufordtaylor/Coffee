@@ -37,6 +37,10 @@
 		NSSet *affectingKey = [NSSet setWithObject:@"red"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 	}
+	if ([key isEqualToString:@"wheel_groupValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"wheel_group"];
+		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+	}
 	if ([key isEqualToString:@"blueValue"]) {
 		NSSet *affectingKey = [NSSet setWithObject:@"blue"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
@@ -111,6 +115,32 @@
 
 
 
+@dynamic wheel_group;
+
+
+
+- (int)wheel_groupValue {
+	NSNumber *result = [self wheel_group];
+	return [result intValue];
+}
+
+- (void)setWheel_groupValue:(int)value_ {
+	[self setWheel_group:[NSNumber numberWithInt:value_]];
+}
+
+- (int)primitiveWheel_groupValue {
+	NSNumber *result = [self primitiveWheel_group];
+	return [result intValue];
+}
+
+- (void)setPrimitiveWheel_groupValue:(int)value_ {
+	[self setPrimitiveWheel_group:[NSNumber numberWithInt:value_]];
+}
+
+
+
+
+
 @dynamic blue;
 
 
@@ -162,6 +192,10 @@
 
 
 
+
+@dynamic flavor_grouping;
+
+	
 
 
 

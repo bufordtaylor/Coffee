@@ -14,9 +14,14 @@
     IBOutlet UIBarButtonItem* newSessionButton;
     NewSessionViewController* newSessionViewController;
     UIPopoverController* popController;
+    UITableView* aTableView;
+    
+    NSMutableArray* cellArray;
 }
 
+@property  (nonatomic, retain) IBOutlet UITableView* aTableView;
 @property (nonatomic, retain) UIBarButtonItem* newSessionButton;
+@property (nonatomic, retain) NSMutableArray* cellArray;
 
 -(IBAction) clickedNewSessionButton:(id)sender;
 

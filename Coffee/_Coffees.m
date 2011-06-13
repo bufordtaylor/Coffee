@@ -29,20 +29,13 @@
 + (NSSet *)keyPathsForValuesAffectingValueForKey:(NSString *)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
 	
-	if ([key isEqualToString:@"inventoryValue"]) {
-		NSSet *affectingKey = [NSSet setWithObject:@"inventory"];
+	if ([key isEqualToString:@"scoreValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"score"];
 		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
 	}
 
 	return keyPaths;
 }
-
-
-
-
-@dynamic date;
-
-
 
 
 
@@ -54,27 +47,48 @@
 
 
 
-@dynamic inventory;
+@dynamic descriptions;
 
 
 
-- (float)inventoryValue {
-	NSNumber *result = [self inventory];
-	return [result floatValue];
+
+
+
+@dynamic score;
+
+
+
+- (int)scoreValue {
+	NSNumber *result = [self score];
+	return [result intValue];
 }
 
-- (void)setInventoryValue:(float)value_ {
-	[self setInventory:[NSNumber numberWithFloat:value_]];
+- (void)setScoreValue:(int)value_ {
+	[self setScore:[NSNumber numberWithInt:value_]];
 }
 
-- (float)primitiveInventoryValue {
-	NSNumber *result = [self primitiveInventory];
-	return [result floatValue];
+- (int)primitiveScoreValue {
+	NSNumber *result = [self primitiveScore];
+	return [result intValue];
 }
 
-- (void)setPrimitiveInventoryValue:(float)value_ {
-	[self setPrimitiveInventory:[NSNumber numberWithFloat:value_]];
+- (void)setPrimitiveScoreValue:(int)value_ {
+	[self setPrimitiveScore:[NSNumber numberWithInt:value_]];
 }
+
+
+
+
+
+@dynamic notes;
+
+
+
+
+
+
+@dynamic date;
+
 
 
 
