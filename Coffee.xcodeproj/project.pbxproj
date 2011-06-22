@@ -12,6 +12,7 @@
 			buildConfigurationList = 97F5F5BA139C43100062B2D6 /* Build configuration list for PBXAggregateTarget "MOGenerator" */;
 			buildPhases = (
 				97F5F5BD139C43340062B2D6 /* ShellScript */,
+				97AC4CAC139C4BB60062FA10 /* ShellScript */,
 			);
 			dependencies = (
 			);
@@ -458,10 +459,10 @@
 			isa = PBXGroup;
 			children = (
 				97392FD9137EFAC400A5E59E /* MainTabViewController.h */,
-				97EB2934135A62100022A0F0 /* CoffeeAppDelegate.h */,
 				97392FDA137EFAC400A5E59E /* MainTabViewController.m */,
 				97392FDB137EFAC400A5E59E /* MainTabViewController.xib */,
 				97900AE3136CEC79008C03D1 /* Settings.h */,
+				97EB2934135A62100022A0F0 /* CoffeeAppDelegate.h */,
 				97EB2935135A62100022A0F0 /* CoffeeAppDelegate.m */,
 				97EB2937135A62100022A0F0 /* MainWindow.xib */,
 			);
@@ -564,6 +565,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		97AC4CAC139C4BB60062FA10 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/bin/mogenerator --model ./cdCoffee.xcdatamodeld/cdCoffee.xcdatamodel --baseClass MOGenBaseClass";
+		};
 		97EB2943135A62100022A0F0 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
